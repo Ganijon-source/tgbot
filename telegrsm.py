@@ -1,7 +1,5 @@
 import requests
 
-# Define your Telegram bot token and chat ID
-
 TOKEN = '7542472244:AAF_uzh6u6yy9wVZcGJ7r-Z9rhR51byUv04'
 
 CHAT_ID = 5518313994
@@ -112,7 +110,7 @@ def send_poll(chat_id):
     response = requests.post(url, params=params)
     return response.json()
 if __name__ == "__main__":
-    # Example sequence of function calls
+
     send_message("Hello! G'anijon, I am you AI.", CHAT_ID)
     send_audio(CHAT_ID)
     send_photo(CHAT_ID)
@@ -122,7 +120,6 @@ if __name__ == "__main__":
     send_location(CHAT_ID)
     send_contact(CHAT_ID)
     send_poll(CHAT_ID)
-    
-    # Optional: Print updates to see incoming messages (if any)
+
     updates = get_updates()
     print("Latest updates:", updates)
